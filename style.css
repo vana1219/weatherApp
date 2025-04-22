@@ -1,0 +1,171 @@
+body{
+    background-image: url(./img/sunny.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+   
+}
+.displayErr{
+    font-size:1.5rem;
+    font-weight: bold;
+    color:black;
+}
+
+#welcomeText{
+    font-family:Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color:#ff9800;
+    margin: 20px 0px 30px;
+    text-shadow: 2px 2px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.userInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+.userInput .localInput{
+    border-radius: 7px;
+    padding:5px;
+    background-color: transparent;
+    width:400px;
+    margin:0px 10px 10px 20px;
+    box-shadow: 5px 2px 10px;
+    align-items: center;
+    
+}
+.userInput .localInput:hover{
+    transition: transform 500ms ease;
+    transform: scale(1.1);
+}
+.userInput button{
+    border-radius: 7px;
+    margin-left:0;
+    background-color: transparent;
+    padding:5px;
+    transition: transform 500ms ease, color 500ms ease;
+}
+.userInput button:hover{
+    background-color:black;
+    color:white;
+    transform:scale(1.1);
+}
+.weatherInfo {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next row */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px; /* Add spacing between the items */
+    margin-top: 20px; /* Add some margin at the top */
+    margin-bottom: 100px;
+}
+
+.cityWeatherContainer {
+    background: linear-gradient(to left bottom, rgb(221, 230, 238), rgb(66, 173, 240));
+    padding: 50px;
+    box-shadow: 5px 2px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    height: 380px;
+    width: 200px;
+}
+
+h1{
+    margin-top:0;
+    margin-bottom:15px;
+}
+p{
+    font-size:1.1rem;
+    margin:5px 0;
+}
+.location, .tempInfo{
+    font-size: 2.0rem;
+    font-weight: bold;
+    color:rgb(60, 56, 56);
+    margin-bottom: 15px;
+}
+.descript{
+    font-size: 1.5rem;
+    font-style:italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: blue;
+}
+.weatherEmoji{
+    font-size: 4.5rem;
+    position: relative;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+}
+@keyframes rotate{
+    100%{transform: rotateZ(-360deg);}
+
+}
+.high, .low{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sunRise, .sunSet{
+    
+    font-style:italic;
+    margin-bottom: 10px;
+}
+
+.currentCity {
+    border: 3px solid #ff9800; /* Highlight with an orange border */
+    box-shadow: 0px 0px 15px rgba(255, 152, 0, 0.7); /* Add a glowing effect */
+}
+#backgroundIcon {
+    position: absolute; /* Position it relative to the page */
+    top: 250px; /* Adjust the position as needed */
+    right: 20px; /* Adjust the position as needed */
+    font-size: 5rem; /* Make the icon large */
+    z-index: -1; /* Ensure it doesn't overlap other content */
+    pointer-events: none; /* Prevent it from interfering with user interactions */
+    animation-name: LeftToRight; /* Name of the animation */
+    animation-duration: 20s; /* Duration of the animation */
+    animation-iteration-count: infinite; /* Repeat the animation infinitely */
+    animation-timing-function: linear; /* Smooth movement */
+    display: block;
+}
+
+@keyframes LeftToRight {
+    0% {
+        left: 0; /* Start at the left edge */
+    }
+    50% {
+        left: 50%; /* Move to the center */
+    }
+    100% {
+        left: 100%; /* End at the right edge */
+    }
+
+}
+footer{
+    position: fixed; /* Fix the footer to a specific position */
+    bottom: 0px; /* Align it to the bottom of the page */
+    left: 0; /* Align it to the left of the page */
+    font-size: 0.9rem; /* Adjust font size */
+    z-index: 10; /* Ensure it stays above other elements */
+    border-top:  2px solid black;
+    width: 100%; /* Make the footer span the full width of the page */
+    background: linear-gradient(to left bottom, rgb(221, 230, 238), rgb(66, 173, 240));
+    text-align: center;
+}
