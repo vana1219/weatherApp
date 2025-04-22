@@ -1,8 +1,10 @@
+import { API_KEY } from './config.js';
+const keyAPI = API_KEY;
 const localInput= document.querySelector(".localInput");
 const userInput=document.querySelector(".userInput");
 const weatherInfo=document.querySelector(".weatherInfo");
 const backgroundIcon = document.getElementById("backgroundIcon");
-const keyAPI="b0f0a42344f4b77209283cec7b9e473a";
+
 
 
 userInput.addEventListener("submit", async event=>{
