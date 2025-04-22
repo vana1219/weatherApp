@@ -42,6 +42,7 @@ async function getWeatherData(locate){
     
 }
 let searchedCity = {};
+let cityQueue = [];
 function displayWeatherData(data){
     const {name: city, 
            main:{temp, temp_max, temp_min},
@@ -57,7 +58,22 @@ function displayWeatherData(data){
     }
     // Add the city to the searchedCity object
     searchedCity[city.toLowerCase()] = true;
+    cityQueue.push(city.toLowerCase());
 
+    // If the queue exceeds 5 cities, remove the oldest one
+    if (cityQueue.length > 5) {
+        const oldestCity = cityQueue.shift(); // Remove the first city from the queue
+        console.log(oldestCity);
+        delete searchedCity[oldestCity]; // Remove it from the searchedCity object
+
+        // Find and remove the corresponding weather info from the DOM
+        const oldestCityElement = Array.from(weatherInfo.children).find((child) => {
+            return child.querySelector("h1")?.textContent.toLowerCase() === oldestCity;
+        });
+        if (oldestCityElement) {
+            weatherInfo.removeChild(oldestCityElement);
+        }
+    }
 
      // Update the background image based on the weather condition
 
