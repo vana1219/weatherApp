@@ -144,6 +144,7 @@ p{
     animation-iteration-count: infinite; /* Repeat the animation infinitely */
     animation-timing-function: linear; /* Smooth movement */
     display: block;
+    background: none;
 }
 
 @keyframes LeftToRight {
@@ -168,4 +169,35 @@ footer{
     width: 100%; /* Make the footer span the full width of the page */
     background: linear-gradient(to left bottom, rgb(221, 230, 238), rgb(66, 173, 240));
     text-align: center;
+}
+
+
+/*Style Responsive */
+@media screen  and (max-width: 500px){
+    #welcomeText{
+        font-size: 1.5em;
+        color: red;
+    }
+    .userInput .localInput{
+        width: 200px;
+    }
+    #backgroundIcon {
+        font-size: 2rem;
+    }
+    .cityWeatherContainer {
+        height: 300px;
+        width: 150px;
+    }
+    .location, .tempInfo{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 1em;
+    }
+    .descript{
+        font-size: 1em;
+    }
+    .weatherEmoji{
+        font-size: 3rem;
+    }
 }
