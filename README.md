@@ -1,5 +1,5 @@
 # WeatherApp
-# Here is how can get the API Key
+# Here is How to get the API Key
 First, Go to this website: https://openweathermap.org/api
 Register your account
 
