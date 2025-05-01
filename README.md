@@ -10,6 +10,8 @@ Click to your account name, and then click "My API Keys"
 
 <img width="1342" alt="Screenshot 2025-05-01 at 3 48 51 PM" src="https://github.com/user-attachments/assets/5de2e764-3637-47b9-a7fc-91c0c6f1e3bb" />
 
+
+
 Create the API key. Keep the key in active mode
 
-Lastly, Copy the to config.js file.
+Lastly, Copy the API key to config.js file.
